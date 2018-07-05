@@ -1,23 +1,19 @@
 'use strict';
+
 const Generator = require('yeoman-generator');
-const chalk = require('chalk');
 const yosay = require('yosay');
 
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(
-      yosay(
-        `Welcome to the scrumtrulescent ${chalk.red('generator-ofx-vscode')} generator!`
-      )
-    );
+    this.log(yosay(`Let's build a new openFrameworks app!`));
 
     const prompts = [
       {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
-        default: true
+        type: 'string',
+        name: 'name',
+        message: `What's the name of this app?`,
+        default: this.appname
       }
     ];
 
@@ -32,9 +28,5 @@ module.exports = class extends Generator {
       this.templatePath('dummyfile.txt'),
       this.destinationPath('dummyfile.txt')
     );
-  }
-
-  install() {
-    this.installDependencies();
   }
 };
