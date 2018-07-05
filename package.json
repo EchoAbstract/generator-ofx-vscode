@@ -1,0 +1,23 @@
+{
+  "name": "generator-ofx-vscode",
+  "version": "1.0.0",
+  "description": "Generate an openFrameworks project for vscode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Brian Wilson <brian@polytopes.me>",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1"
+  }
+}
